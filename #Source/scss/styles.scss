@@ -12,25 +12,262 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 .header {
-		&__top {}
-		&__top-title {}
-		&__top-subtitle {}
-		&__top-cards {}
-		&__top-card {}
-		&__top-card-number {}
-		&__top-card-descr {}
-		&__menu {}
-		&__menu-links {}
-		&__menu-link {}
+		&__top {
+            background: url("../img/header__background.png") no-repeat;
+            background-size: cover;
+            
+        }
+        &__top-container {
+            background-color: rgba(102, 103, 132, 0.67);
+            width: 100%;
+            height: 100%;
+            padding: 198px 0px 122px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+		&__top-title {
+            font-family: 'Parangon530C';
+            font-size: 48px;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+            margin: 0 0 52px 0;
+            max-width: 1075px;
+            line-height: 72px;
+        }
+		&__top-subtitle {
+            font-family: 'PTSans-Caption';
+            font-size: 24px;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+            margin: 0 0 68px 0;
+            max-width: 830px;
+            line-height: 36px;
+
+        }
+		&__top-cards {
+            display: flex;
+            justify-content: center;
+        }
+		&__top-card {
+            width: 251px;
+            height: 160px;
+            position: relative;
+            padding: 45px 0 40px 0;
+            border-bottom: 1px solid #fff;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 55px 0 0;
+            &:last-child {
+                margin: 0;
+            }
+            &>img {
+                position: absolute;
+                top: -15px;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                overflow: hidden;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 90px;
+                height: 1px;
+                background: #fff;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 90px;
+                height: 1px;
+                background: #fff;
+            }
+        }
+		&__top-card-number {
+            font-family: 'Parangon530C';
+            font-size: 48px;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+        }
+		&__top-card-descr {
+            font-family: 'PTSans-Caption';
+            font-size: 18px;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+        }
+		&__menu {
+            padding: 40px 0;
+            border-bottom: 2px solid #afafaf;
+        }
+		&__menu-links {
+            display: flex;
+            justify-content: flex-end;
+
+            @media (min-width: 1500px) {
+                justify-content: center;
+            }
+        }
+		&__menu-link {
+            
+            letter-spacing: 0.05em;
+            
+            margin: 0 39px 0 0;
+            
+            &> a {
+                transition: 1s;
+                font-family: FuturaBT-Book;
+                font-size: 30px;
+                color: #000000;
+            }
+            
+            &:last-child {
+                margin: 0 130px 0 0;
+
+                @media (max-width: 950px) {
+                    margin: 0;
+                }
+            }
+            &:hover >a {
+                color: #f6ae48;
+                transition: 0.5s;
+            }
+        }
         
 }
 
-.body {
 
+.body {
+    &__block1 {}
+    &__block1-top {
+        display: flex;
+        padding: 170px 0 0 0;
+        justify-content: center;
+        margin: 0 0 221px 0;
+    }
+    &__block1-top-title {
+        font-family: 'Helvetica Neue Cyr';
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #000000;
+        margin: 0 222px 0 0;
+        display: flex;
+        align-items: center;
+    }
+    &__block1-top-descr {
+        font-family: Arial;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        color: #000000;
+        max-width: 775px;
+    }
+    &__block1-items {
+        display: flex;
+        justify-content: center;
+    }
+    &__block1-item {
+        font-family: Arial;
+        max-width: 400px;
+        margin: 0 25px;
+        padding: 25px;
+
+        &.active {
+            background-color: #f6ae48;
+        }
+    }
+    &__block1-item-img {
+        margin: 0 0 10px 0;
+        height: 60px;
+
+        &>img {
+            max-width: 100%;
+            height: auto;
+            max-height: 58px;
+            object-fit: cover;
+        }
+    }
+    &__block1-item-title {
+        font-size: 20.5px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #000000;
+        margin: 0 0 10px 0;
+    }
+    &__block1-item-descr {
+        
+        font-size: 15.4px;
+        line-height: 25px;
+        letter-spacing: 0.05em;
+        color: #000000;
+    }
+    &__block1-item-price {
+        display: none;
+
+        &.active {
+            display: block;
+            margin: 10px 0 0 0;
+        }
+    }
+
+    &__block2 {
+
+        .item1 {
+        }
+        .item2 {
+        }
+    }
+    &__block2-top {}
+    &__block2-top-title {}
+    &__block2-top-information {}
+    &__block2-bottom {}
+    &__block2-bottom-title {}
+    &__block2-bottom-items {}
+    &__block2-bottom-item {}
+    &__block2-bottom-item-name {}
+    &__block2-bottom-item-price {}
+
+    &__block3 {}
+    &__block3-text {}
+    &__block3-text-title {}
+    &__block3-text-descr {}
+    &__block3-partners {}
+
+    &__block4 {}
+    &__block4-title {}
+    &__block4-galary {}
+    &__block4-button {}
 }
 
 
 
-
+.wrapper {
+}
+.header {
+		// &__top {display: none;}
+		// &__menu {display: none;}
+}
+.body {
+		// &__block1 {display: none;}
+		// &__block2 {display: none;}
+		// &__block3 {display: none;}
+		// &__block4 {display: none;}
+}
 
