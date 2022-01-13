@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -74,4 +75,41 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: 400;
+}
+
+a, button, input, textarea {
+  color: #111;
+  background: none;
+}
+
+@font-face {
+  font-family: "Parangon530C";
+  src: local("Parangon530C"), url("https://nomail.com.ua/files/woff/7ca193358a8f826917a012c7bad68b7f.woff") format("woff");
+}
+@font-face {
+  font-family: "FuturaBT-Bold";
+  src: local("FuturaBT-Bold"), url("https://nomail.com.ua/files/woff/77c39d7d46ba8c98529571e14b59cb99.woff") format("woff");
+}
+@font-face {
+  font-family: "FuturaBT-Book";
+  src: local("FuturaBT-Book"), url("https://nomail.com.ua/files/woff/ead5c28b0b3c60d481994292f7418a7d.woff") format("woff");
+}
+@font-face {
+  font-family: "Tahoma-Bold";
+  src: local("Tahoma-Bold"), url("https://nomail.com.ua/files/woff/269a3173c2531cfc6b376971a672dac3.woff") format("woff");
+}
+@font-face {
+  font-family: "PTSans-Caption";
+  src: local("PTSans-Caption"), url("https://nomail.com.ua/files/woff/b1b337adf11ce099611ca3c66d3def5a.woff") format("woff");
+}
+@font-face {
+  font-family: "MyriadPro-Cond";
+  src: local("MyriadPro-Cond"), url("https://nomail.com.ua/files/woff/e2a5e608ba42366402cbf775c06f3f15.woff") format("woff");
+}
+.wrapper {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
 }
