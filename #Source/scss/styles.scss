@@ -1,4 +1,5 @@
 @import "null.scss";
+@import "adaptiv.scss";
 
 @font-face {
     font-family: 'Parangon530C';
@@ -963,4 +964,15 @@ footer {
     justify-content: center;
     color: #fff;
     font-size: 18px;
+}
+
+.body {
+    &__block1 {display: none;}
+    &__block2 {display: none;}
+    &__block3 {display: none;}
+    &__block4 {display: none;}
+    &__block5 {display: none;}
+    &__block6 {display: none;}
+    &__block7 {display: none;}
+    &__block8 {display: none;}
 }
